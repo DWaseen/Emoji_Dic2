@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="csv-03-tcu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_Dic2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_Dic2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,8 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bdo-nF-OoD">
-                                <frame key="frameInset" minX="9" minY="-10" width="375" height="647"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bdo-nF-OoD">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -31,18 +31,20 @@
                             <constraint firstItem="bdo-nF-OoD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="smp-6e-FnG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Z9P-Tt-GCT"/>
                     <connections>
                         <outlet property="tableview" destination="bdo-nF-OoD" id="9NT-sc-fD0"/>
+                        <segue destination="vxj-k9-4lq" kind="show" identifier="moveSegue" id="i3G-C6-6Ia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Definition View Controller-->
         <scene sceneID="TLB-F3-Xjt">
             <objects>
-                <viewController id="vxj-k9-4lq" sceneMemberID="viewController">
+                <viewController id="vxj-k9-4lq" customClass="DefinitionViewController" customModule="Emoji_Dic2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iUg-hx-Qxg"/>
                         <viewControllerLayoutGuide type="bottom" id="H4a-el-kuT"/>
@@ -51,39 +53,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fvB-rK-lWF">
-                                <frame key="frameInset" minX="166" minY="79" width="110" height="122"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fvB-rK-lWF"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp0-Fh-u6a">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="irH-5o-bJM">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="💒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy2-Q7-ZrL">
-                                        <frame key="frameInset" width="110" height="122"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy2-Q7-ZrL">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="LSC-i4-vX4"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="102"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Xy2-Q7-ZrL" firstAttribute="centerX" secondItem="fvB-rK-lWF" secondAttribute="centerX" id="D05-Jj-SWv"/>
-                                    <constraint firstItem="Xy2-Q7-ZrL" firstAttribute="top" secondItem="fvB-rK-lWF" secondAttribute="top" constant="100" id="rhl-hv-aWk"/>
+                                    <constraint firstItem="Xy2-Q7-ZrL" firstAttribute="centerX" secondItem="irH-5o-bJM" secondAttribute="centerX" id="eas-35-l0B"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp0-Fh-u6a">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Bp0-Fh-u6a" firstAttribute="top" secondItem="iUg-hx-Qxg" secondAttribute="bottom" constant="268" id="6MB-BV-bmj"/>
-                            <constraint firstItem="Bp0-Fh-u6a" firstAttribute="centerX" secondItem="9me-X9-HAg" secondAttribute="centerX" id="Bvv-pu-oGf"/>
-                            <constraint firstItem="fvB-rK-lWF" firstAttribute="centerX" secondItem="9me-X9-HAg" secondAttribute="centerX" id="Dpw-ih-29d"/>
-                            <constraint firstItem="Bp0-Fh-u6a" firstAttribute="centerX" secondItem="9me-X9-HAg" secondAttribute="centerX" id="ik7-Mt-svJ"/>
+                            <constraint firstItem="Bp0-Fh-u6a" firstAttribute="top" secondItem="irH-5o-bJM" secondAttribute="bottom" constant="71" id="3gu-Uq-QIu"/>
+                            <constraint firstItem="Bp0-Fh-u6a" firstAttribute="leading" secondItem="9me-X9-HAg" secondAttribute="leadingMargin" constant="88" id="ByG-VR-46p"/>
+                            <constraint firstItem="Xy2-Q7-ZrL" firstAttribute="top" secondItem="iUg-hx-Qxg" secondAttribute="bottom" constant="75" id="GcN-MI-2LX"/>
+                            <constraint firstItem="Xy2-Q7-ZrL" firstAttribute="centerX" secondItem="9me-X9-HAg" secondAttribute="centerX" id="HyS-vc-PhY"/>
+                            <constraint firstItem="fvB-rK-lWF" firstAttribute="top" secondItem="iUg-hx-Qxg" secondAttribute="bottom" constant="15" id="XvZ-l9-VTF"/>
+                            <constraint firstItem="irH-5o-bJM" firstAttribute="top" secondItem="iUg-hx-Qxg" secondAttribute="bottom" constant="75" id="bm0-C9-snE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fvB-rK-lWF" secondAttribute="trailing" constant="83" id="c2W-ba-sO6"/>
+                            <constraint firstItem="fvB-rK-lWF" firstAttribute="leading" secondItem="9me-X9-HAg" secondAttribute="leading" constant="166" id="eF4-w1-Q5T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="irH-5o-bJM" secondAttribute="trailing" constant="72" id="g0q-Nc-vCs"/>
+                            <constraint firstAttribute="bottom" secondItem="fvB-rK-lWF" secondAttribute="bottom" constant="466" id="iuU-By-t2W"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="definitionLabel" destination="Bp0-Fh-u6a" id="L2N-OE-Yi6"/>
+                        <outlet property="emojiLabel" destination="Xy2-Q7-ZrL" id="o6V-m2-GaP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAh-fe-dkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="139"/>
+            <point key="canvasLocation" x="2036" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NhZ-1A-74W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="csv-03-tcu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="agN-HD-Nci">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="axr-x4-rk5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRb-Ft-PaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
