@@ -62,9 +62,6 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="irH-5o-bJM">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy2-Q7-ZrL">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="110" id="LSC-i4-vX4"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="102"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -74,22 +71,40 @@
                                     <constraint firstItem="Xy2-Q7-ZrL" firstAttribute="centerX" secondItem="irH-5o-bJM" secondAttribute="centerX" id="eas-35-l0B"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Smiley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHg-OE-jW8">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday: 2010" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xy-u4-zm6">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Bp0-Fh-u6a" firstAttribute="top" secondItem="irH-5o-bJM" secondAttribute="bottom" constant="71" id="3gu-Uq-QIu"/>
-                            <constraint firstItem="Bp0-Fh-u6a" firstAttribute="leading" secondItem="9me-X9-HAg" secondAttribute="leadingMargin" constant="88" id="ByG-VR-46p"/>
                             <constraint firstItem="Xy2-Q7-ZrL" firstAttribute="top" secondItem="iUg-hx-Qxg" secondAttribute="bottom" constant="75" id="GcN-MI-2LX"/>
                             <constraint firstItem="Xy2-Q7-ZrL" firstAttribute="centerX" secondItem="9me-X9-HAg" secondAttribute="centerX" id="HyS-vc-PhY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uHg-OE-jW8" secondAttribute="trailing" constant="100" id="Sta-BR-ipI"/>
+                            <constraint firstItem="Bp0-Fh-u6a" firstAttribute="centerX" secondItem="9me-X9-HAg" secondAttribute="centerX" id="XMs-JE-gNr"/>
                             <constraint firstItem="fvB-rK-lWF" firstAttribute="top" secondItem="iUg-hx-Qxg" secondAttribute="bottom" constant="15" id="XvZ-l9-VTF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4xy-u4-zm6" secondAttribute="trailing" constant="100" id="bGe-i4-DXr"/>
                             <constraint firstItem="irH-5o-bJM" firstAttribute="top" secondItem="iUg-hx-Qxg" secondAttribute="bottom" constant="75" id="bm0-C9-snE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fvB-rK-lWF" secondAttribute="trailing" constant="83" id="c2W-ba-sO6"/>
                             <constraint firstItem="fvB-rK-lWF" firstAttribute="leading" secondItem="9me-X9-HAg" secondAttribute="leading" constant="166" id="eF4-w1-Q5T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bp0-Fh-u6a" secondAttribute="trailing" constant="100" id="euM-cI-7fZ"/>
+                            <constraint firstItem="Bp0-Fh-u6a" firstAttribute="centerX" secondItem="9me-X9-HAg" secondAttribute="centerX" id="fwr-oa-6yz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="irH-5o-bJM" secondAttribute="trailing" constant="72" id="g0q-Nc-vCs"/>
                             <constraint firstAttribute="bottom" secondItem="fvB-rK-lWF" secondAttribute="bottom" constant="466" id="iuU-By-t2W"/>
+                            <constraint firstItem="uHg-OE-jW8" firstAttribute="top" secondItem="Bp0-Fh-u6a" secondAttribute="bottom" constant="20" id="u8L-Uy-KGk"/>
+                            <constraint firstItem="4xy-u4-zm6" firstAttribute="top" secondItem="uHg-OE-jW8" secondAttribute="bottom" constant="20" id="vDz-S6-Nd8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthdayLabel" destination="4xy-u4-zm6" id="lTf-7H-kJX"/>
+                        <outlet property="categoryLabel" destination="uHg-OE-jW8" id="K0B-iA-5lF"/>
                         <outlet property="definitionLabel" destination="Bp0-Fh-u6a" id="L2N-OE-Yi6"/>
                         <outlet property="emojiLabel" destination="Xy2-Q7-ZrL" id="o6V-m2-GaP"/>
                     </connections>
